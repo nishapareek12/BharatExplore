@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  
+    <title>Document</title>
+    <style>
+         /* body{
+            background:url("l2.jpg") no-repeat center fixed;;
+            background-size:cover;
+            border: 100 px solid rgb(117, 72, 72);
+            background-repeat: no-repeat;
+            opacity: 50%;
+          
+         }
+         body::before{
+          content: " ";
+          opacity: 50%;
+          z-index: -1;
+
+         } */
+         .image{
+display:contents;
+}
+
+.image::before{
+content: " ";
+position: absolute;
+height: 100%;
+width: 100%;
+background: url("l2.jpg");
+opacity: 0.83;
+z-index: -1;
+background-size: 100%;
+}
+h1{
+  background-color: yellow;
+  padding: 20px;
+  display: none;
+}
+  
+span:hover + h1 {
+  display: block;
+}
+
+        
+         form{
+          
+          margin-top: 200px;
+          margin-right: 00px; 
+          margin-left: 650px;
+          /* border-radius: 25px; */
+          /* box-shadow : 3px 10px 17px 1px white; */
+          width: 40%;
+          border-radius: 25px black;
+          /* opacity: 100%; */
+         }
+         h1{
+          color: rgb(14, 9, 9);
+          font-size: 40px;
+          text-shadow: 2px 2px 5px black;
+         }
+         label{
+          color: rgb(9, 9, 13);
+          /* font-size: 70px; */
+          font-weight:bold;
+          text-shadow: 5px 5px 9px black;
+         }
+         /* p:hover{
+          width: fit-content;
+          opacity: 80%;
+          background-color: rgb(243, 84, 36);
+         } */
+         p{
+          font-size: 27px;
+         }
+         .container {
+            font-size: 50px;
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            margin-right;: 100px
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #2c2929;
+  border-radius: 2px;
+  /* background-color: rgb(189, 41, 22); */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  /* background-color: rgb(248, 242, 242); */
+  border: 1px #000;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #163953;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: 4px black;
+  border: solid rgb(209, 195, 195);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* .hover  { */
+  /* width:fit-content; */
+  /* --s: 0.1em;   the thickness of the line */
+  /* --c: #6fe8f8; the color */
+  
+  /* color: #0000;
+  padding-bottom: var(--s);
+  background: 
+    linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: 0.5s;
+} */
+/* .hover:hover {
+  --_p: 100%
+} */
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-content: center;
+}
+h3 {
+  font-family: system-ui, sans-serif;
+  font-size: 3rem;
+  margin:0;
+  cursor: pointer;
+  padding: 0 .1em;
+}
+
+
+    </style>
+</head>
+<body class="image">
+    <h1>I will show on hover</h1>
+  <!-- <div> -->
+  <form>
+  <h1>Preferences</h1>
+  <label class="container"><p >History</p>
+    <input type="checkbox" checked="checked">
+    <span class="checkmark"></span>
+  <!-- </label>
+  <label class="container"><p class="hover">Pilgrimage</p>
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+  <label class="container"><p class="hover">Landscape</p>
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label>
+  <label class="container"><p class="hover">Market</p>
+    <input type="checkbox">
+    <span class="checkmark"></span>
+  </label> -->
+  </form>
+  <!-- </div> -->
+</body>
+</html>

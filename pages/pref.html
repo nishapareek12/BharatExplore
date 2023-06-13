@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  
+    <title>Document</title>
+    <style>
+         /* body{
+            background:url("l2.jpg") no-repeat center fixed;;
+            background-size:cover;
+            border: 100 px solid rgb(117, 72, 72);
+            background-repeat: no-repeat;
+            opacity: 50%;
+          
+         }
+         body::before{
+          content: " ";
+          opacity: 50%;
+          z-index: -1;
+
+         } */
+         .image{
+display:contents;
+}
+
+.image::before{
+content: " ";
+position: absolute;
+height: 100%;
+width: 100%;
+background: url("a2.webp");
+opacity: 0.9;
+z-index: -1;
+background-size:cover;
+background-repeat: no-repeat;
+}
+         form{
+          /* margin-bottom: 500px; */
+          margin-top: 100px;
+          margin-right: 00px; 
+          margin-left: 250px;
+          /* border-radius: 25px; */
+          /* box-shadow : 3px 10px 17px 1px white; */
+          width: 40%;
+          border-radius: 25px black;
+          /* opacity: 100%; */
+         }
+         h1{
+          color: rgb(250, 248, 248);
+          font-size: 40px;
+          text-shadow: 2px 2px 5px black;
+         }
+         label{
+          color: rgb(9, 9, 13);
+          /* font-size: 70px; */
+          font-weight:bold;
+          text-shadow: 5px 5px 9px black;
+         }
+         /* p:hover{
+          width: fit-content;
+          opacity: 80%;
+          background-color: rgb(243, 84, 36);
+         } */
+         p{
+          font-size: 27px;
+          color: white;
+         }
+         .container {
+            font-size: 50px;
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            margin-right;: 100px
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .submit{
+          height:200px;
+          width: 500px;
+        }
+        .submit {
+          margin-top: 150px;
+          margin-right: 00px; 
+          margin-left: 250px;
+          
+  background-color: #111211; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: transparent; 
+  color: black; 
+  /* border: 2px solid #0b0b0b; */
+}
+.submit:hover {
+  /* border: 1px solid black; */
+  transform: scale(1.3);
+  background-color: transparent rgb(40, 36, 36);
+  color: white;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #fcf9f9;
+  border-radius: 2px;
+  /* background-color: rgb(189, 41, 22); */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  /* background-color: rgb(248, 242, 242); */
+  border: 1px #000;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #163953;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: 4px black;
+  border: solid rgb(209, 195, 195);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.hover  {
+  width:fit-content;
+  --s: 0.1em;   /* the thickness of the line */
+  --c: #346c7e; /* the color */
+  
+  color:rgb(217, 207, 207);
+  padding-bottom: var(--s);
+  background: 
+    linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: 0.5s;
+}
+.hover:hover {
+  --_p: 100%
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-content: center;
+}
+h3 {
+  font-family: system-ui, sans-serif;
+  font-size: 3rem;
+  margin:0;
+  cursor: pointer;
+  padding: 0.1em;
+}
+.pt-3 my-3 mx-3 text-muted border-top{
+  /* position: fixed; */
+  margin-top: 500px;
+  margin-bottom: 900px;
+}
+/* th{
+  border: 5px solid;
+} */
+.hello{
+  position: relative;
+  left:10px;
+  bottom: -217px;
+}
+    </style>
+</head>
+<body class="image">
+  
+  <nav class="navbar navbar-expand bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Bharat-Explore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="page1.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="cityenter.html">Explore</a>
+              </li>
+              <li class="nav-item">
+                  <a href="page2.html"class="nav-link active" aria-current="page" href="#">Destination</a>
+              </li>
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+  
+<div class="image">
+    <table>
+        <th width="800px">
+          <form>
+            <h1>Preferences</h1>
+            <label class="container"><p id="sd" class="hover">History</p>
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"><p class="hover">Pilgrimage</p>
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"><p class="hover">Landscape</p>
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"><p class="hover">Market</p>
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            </form> 
+        </th> 
+        
+        <!-- <th width="800px" height="639px"> -->
+          <th>
+          <form action="pref2.html">
+            <button class="submit" width="600px"><h1>Let's Go!!</h1></button>
+          </form>
+        </th>
+    </table><br><br><br><br>
+    </div>
+    <div class ="hello">
+    <footer class="pt-3 my-3 mx-3 text-muted border-top">
+      Created by Students of
+      A D Patel institute of technology
+  </footer></div>
+</body>
+</html>

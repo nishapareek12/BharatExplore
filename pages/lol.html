@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>AngualrJS Controller</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myNgApp">
+    <div ng-app="myApp" ng-controller="myCtrl"> 
+        First Name: <input type="text" ngmodel="x"><br> 
+        Last Name: <input type="text" ngmodel="lastName"><br> 
+        <p>khl<span ng-bind="x "></span></p> </div> 
+        <script> 
+        var app = angular.module("myNgApp", []); 
+        app.controller("myCtrl" , function($scope)
+        { $scope.eval(x,"5+5"); $scope.lastName= "Rambo"; });
+        </script>
+</body>
+</html>
